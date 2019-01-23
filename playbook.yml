@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - package:
+     name: ['vim']
+     state: present
+
+

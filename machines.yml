@@ -1,0 +1,27 @@
+- name: platform
+  cpus: 1
+  memory: 1024
+  hostname: platform.lab.com
+  ip: 192.168.66.10
+  sistema: ubuntu/bionic64
+
+- name: automation
+  cpus: 1
+  memory: 1024
+  hostname: automation.lab.com
+  ip: 192.168.66.20
+  sistema: centos/7
+
+#- name: docker
+#  cpus: 1
+#  memory: 1024
+#  hostname: docker.lab.com
+#  ip: 192.168.66.30
+#  sistema: ubuntu/bionic64
+
+#- name: monitoring
+#  cpus: 1
+#  memory: 2048
+#  hostname: monitoring.lab.com
+#  ip: 192.168.66.40
+#  sistema: ubuntu/bionic64
