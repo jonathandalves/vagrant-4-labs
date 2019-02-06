@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     end
 
     if server["sistema"] == "ubuntu/bionic64"
-      srv.vm.provision "shell", inline: "apt install python -y"
+      config.vm.provision "shell", inline: "apt install python -y"
     else
       config.vm.provision "shell", inline: "mkdir -p /root/.ssh"
     end
