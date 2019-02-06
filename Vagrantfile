@@ -17,11 +17,10 @@ Vagrant.configure("2") do |config|
     end
 
     if server["sistema"] == "ubuntu/bionic64"
-      config.vm.provision "shell", inline: "apt install python -y"
-    else
-      config.vm.provision "shell", inline: "mkdir -p /root/.ssh"
+      srv.vm.provision "shell", inline: "apt install python -y"
     end
 
+      config.vm.provision "shell", inline: "mkdir -p /root/.ssh"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa /root/.ssh/id_rsa"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa.pub /root/.ssh/authorized_keys"
 
