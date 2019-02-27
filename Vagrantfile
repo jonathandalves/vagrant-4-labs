@@ -23,6 +23,7 @@ Vagrant.configure("2") do |config|
       config.vm.provision "shell", inline: "mkdir -p /root/.ssh"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa /root/.ssh/id_rsa"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa.pub /root/.ssh/authorized_keys"
+      config.vm.provision "shell", inline: "chmod 600 /root/.ssh/id_rsa"
 
       srv.vm.provision :ansible do |ansible|
         ansible.limit = "all"
