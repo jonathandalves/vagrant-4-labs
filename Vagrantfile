@@ -6,7 +6,7 @@ require 'set'
 yaml = YAML.load_file("machines.yml")
 
 Vagrant.configure("2") do |config|
-yaml.each do |server|
+  yaml.each do |server|
 
     config.trigger.before :up do |before|
       before.ruby do |env,machine|
