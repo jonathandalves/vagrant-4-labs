@@ -6,6 +6,6 @@ Vagrantfile para criação de laboratórios com Hashicorp Vagrant, personalizado
 
 MIT license.
 
-#Author Information
+# Author Information
 
 Criado por [Jonathan Dantas Alves](https://www.linkedin.com/in/jonathandantasalves/).
