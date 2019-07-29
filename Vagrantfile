@@ -9,6 +9,10 @@ Vagrant.configure("2") do |config|
 
     config.trigger.before :up do |before|
       before.ruby do |env,machine|
+        File.open('.hosts.tmp', 'a') do |hosts|
+          hosts.write("127.0.0.1 localhost \n#{server['ip']} #{server['hostname']} \n")
+        File.open("hosts", "w+") { |file| file.puts File.readlines(".hosts.tmp").uniq }
+        end
         if !(File.exists?('id_rsa'))
           system("ssh-keygen -b 2048 -t rsa -f id_rsa -q -N ''")
         end
