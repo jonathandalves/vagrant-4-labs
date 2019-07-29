@@ -39,10 +39,15 @@ Base para /etc/hosts:
 
 *O arquivo .hosts.tmp é um arquivo oculto para armazenamento da identificação das máquinas virtuais, no entanto, já que ele faz parte de um loop, deve conter uma série de valores repetidos - que são filtrados e armazenamos no arquivo hosts.
 
-Se você tiver uma nova máquina virtuais para o laboratório, reinicie e reprovisione as máquinas virtuais que já estão em execução para que elas sincronizem o arquivo /etc/hosts com a identificação da nova VM.
+Se você tiver uma nova máquina virtual para o laboratório, resincronize o conteúdo do diretório /vagrant de dentro das VMs com o comando:
 
 ```
-vagrant reload
+vagrant rsync
+```
+
+A seguir reprovisione as máquinas virtuais que já estão em execução para que elas sincronizem o arquivo /etc/hosts com a identificação da nova VM, usando:
+
+```
 vagrant up --provision
 ```
 
