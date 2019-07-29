@@ -33,6 +33,7 @@ Vagrant.configure("2") do |config|
         srv.vm.provision "shell", inline: "apt install python -y"
       end
 
+      config.vm.provision "shell", inline: "cp /vagrant/hosts /etc/hosts"
       config.vm.provision "shell", inline: "mkdir -p /root/.ssh"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa /root/.ssh/id_rsa"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa.pub /root/.ssh/authorized_keys"
