@@ -18,10 +18,16 @@ Faça o download dos arquivos disponíveis neste projeto através do git:
 git clone https://github.com/jonathandalves/vagrant-4-labs.git
 ```
 
-Acesse o diretório vagrant-4-labs e construa as máquinas virtuais através do Vagrant:
+Acesse o diretório vagrant-4-labs e, através do arquivo machines.yml, personalize as características das máquinas virtuais que você deseja construír.
 
 ```
 cd vagrant-4-labs
+vim machines.yml
+```
+
+A seguir construa as máquinas virtuais usando o Vagrant:
+
+```
 vagrant up
 ```
 
