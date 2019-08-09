@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define server["name"] do |srv|
-      srv.vm.box = server["sistema"]
+      srv.vm.box = server["system"]
       srv.vm.network "private_network", ip: server["ip"]
       srv.vm.hostname = server["hostname"]
       srv.vm.provider "virtualbox" do |vb|
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
         vb.cpus = server["cpus"]
       end
 
-      if server["sistema"] == "ubuntu/bionic64"
+      if server["system"] == "ubuntu/bionic64"
         srv.vm.provision "shell", inline: "apt install python -y"
       end
 
